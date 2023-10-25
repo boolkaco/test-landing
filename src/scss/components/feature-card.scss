@@ -1,0 +1,263 @@
+@import "../variables";
+
+.feature-card__wrapper {
+  position: relative;
+  width: 35rem;
+  height: 42.8rem;
+  cursor: pointer;
+}
+
+.feature-card__card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 50rem;
+}
+
+.feature-card__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.feature-card__content-front,
+.feature-card__content-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.feature-card__content-front[datatype="jellyverse"]::after {
+  background-color: $col-feature-jellyverse-card-bg;
+}
+
+.feature-card__content-front[datatype="jellyswap"]::after {
+  background-color: $col-feature-jellyswap-card-bg;
+}
+
+.feature-card__content-front[datatype="jellystake"]::after {
+  background-color: $col-feature-jellystake-card-bg;
+}
+
+.feature-card__content-front::after {
+  border-radius: 1rem;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  transition: height 0.5s;
+}
+
+.feature-card__content-front:hover::after {
+  height: 100%;
+}
+
+.feature-card__content-back {
+  text-align: center;
+  padding: 3.2rem 4.2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 0.2rem $col-feature-card-border;
+  transform: rotateY(180deg);
+
+  font-family: 'GalanoGrotesque', serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: $col-text;
+}
+
+.feature-card__content-back-description {
+  margin-top: 2.2rem;
+  text-align: left;
+  font-family: 'GalanoGrotesque', serif;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  letter-spacing: -5%;
+}
+
+.feature-card {
+  z-index: 1;
+  position: relative;
+  width: 35rem;
+  height: 42.8rem;
+  padding: 3.2rem 4.2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 0.2rem $col-feature-card-border;
+
+
+  &--more {
+    padding: 2.4rem;
+    box-shadow: none;
+    background-color: $col-feature-more-bg;
+    color: $col-text;
+  }
+}
+
+.feature-card__icon {
+  width: 2.7rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.feature-card__title {
+  z-index: 1;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  font-family: 'GalanoGrotesque', serif;
+  color: $col-text;
+
+  &--dark {
+    color: $col-feature-jellyswap-title;
+  }
+}
+
+.feature-card__description {
+  margin-top: 2.2rem;
+  font-family: 'GalanoGrotesque', serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: $col-text;
+
+  &--jly {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  &--dark {
+    color: $col-feature-jellyswap-title;
+  }
+}
+
+.feature-card__img {
+  width: 100%;
+  position: absolute;
+  bottom: -0.4rem;
+  left: 0;
+
+  &--jellybond {
+    position: absolute;
+    padding: 2rem;
+    bottom: -2rem;
+  }
+}
+
+.feature-card__img--more {
+  position: absolute;
+  width: 12.2rem;
+  bottom: 2.4rem;
+  right: 2rem;
+}
+
+.feature-card__decoration-img-first {
+  z-index: -1;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.2rem;
+  width: 34rem;
+}
+
+.feature-card__decoration-img-second {
+  z-index: -1;
+  position: absolute;
+  left: 0.2rem;
+  top: 2.6rem;
+  width: 33.8rem;
+}
+
+.feature-card__decoration-img-third {
+  z-index: -1;
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  width: 24rem;
+}
+
+.feature-card__decoration-img-fourth {
+  z-index: -1;
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.2rem;
+  width: 30rem;
+  border-radius: 1rem;
+}
+
+.feature-card__more {
+  font-family: 'GalanoGrotesque', serif;
+  font-size: 7.2rem;
+  line-height: 7.6rem;
+}
+
+.card-coming-soon__coming-up {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: -0.2rem;
+  height: 4.6rem;
+  width: calc(100% + 0.4rem);
+  background-color: $col-black;
+  color: $col-text;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  letter-spacing: -3%;
+  text-align: left;
+
+  .line {
+    margin-right: 2.6rem;
+  }
+
+  .line:nth-child(odd) {
+    font-family: 'GalanoGrotesque', serif;
+  }
+
+  .line:nth-child(even) {
+    font-family: 'GalanoGrotesqueLight', serif;
+  }
+
+  &--up {
+    transform: rotate(-8deg) skew(-8deg);
+    top: 70%;
+  }
+
+  &--down {
+    transform: rotate(8deg) skew(8deg);
+    top: 50%;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.card-coming-soon__marquee {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.card-coming-soon__marquee-content {
+  display: inline-block;
+  animation: marquee 5s linear infinite;
+}
+
+.card-title__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card-title {
+  font-family: 'GalanoGrotesque', serif;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -5%;
+  text-align: left;
+  margin-left: 1rem;
+}

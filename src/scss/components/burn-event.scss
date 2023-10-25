@@ -1,0 +1,66 @@
+@import "../variables";
+
+.burn-event {
+  padding: 1.8rem 12.8rem 0 12rem;
+  height: 100vh;
+  background-color: $col-burn-event-bg;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      padding: 0;
+    }
+  }
+}
+
+.burn-event__event {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      padding: 32.8rem 2rem 13.4rem 2rem;
+    }
+  }
+}
+
+.burn-event__arrow-icon-down {
+  display: none;
+  width: 7.4rem;
+  height: 7.4rem;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      display: block;
+    }
+  }
+}
+
+.burn-event__arrow-icon {
+  width: 5.4rem;
+  height: 5.4rem;
+  margin-right: 6.6rem;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.burn-event__title {
+  font-family: 'GalanoGrotesque', serif;
+  font-size: 8.6rem;
+  line-height: 17.4rem;
+  letter-spacing: -5%;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+    }
+  }
+}

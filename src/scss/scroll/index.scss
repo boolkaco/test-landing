@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.scroll-content > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.app__scrollbar>.scrollbar-track {
+  width: 1rem;
+  background-color: transparent;
+
+  &>.scrollbar-thumb {
+    background-color: $col-storm-gray;
+  }
+}

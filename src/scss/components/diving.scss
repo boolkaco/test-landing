@@ -1,0 +1,72 @@
+@import "../variables.scss";
+
+.diving {
+  position: absolute;
+  background-color: $col-bg;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.diving.complete {
+  transform: translateY(-100%);
+  transition: transform 1s;
+}
+
+.diving.color-changed {
+  background-color: red !important;
+  transition: background-color 1s;
+}
+
+.diving::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: $col-diving-bg;
+  animation: fillUp 2s forwards linear;
+}
+
+.diving__title {
+  padding: 0 16rem;
+  margin-top: 20.6rem;
+  transform: translate(0,0);
+  font-family: 'GalanoGrotesque', serif;
+  height: 100%;
+  font-size: 17rem;
+  line-height: 18.6rem;
+  letter-spacing: -3%;
+  display: flex;
+  justify-content: space-between;
+  color: $col-text;
+}
+
+@keyframes fillUp {
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes fillDown {
+  to {
+    height: 0;
+  }
+}
+
+.diving__block-decoration-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%); /* изначальное положение внизу экрана */
+  transition: transform 2s;
+
+  background: linear-gradient(to top, #8B85FF 50%, #B6FB75 50%);
+}
+
+.diving__block-decoration.animate {
+  transform: translateY(-200%);
+}

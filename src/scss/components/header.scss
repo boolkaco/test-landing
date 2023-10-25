@@ -1,0 +1,149 @@
+@import "../variables.scss";
+
+
+.header__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.header__content {
+  width: 100%;
+  padding: 0 2rem 3.6rem;
+  display: flex;
+  position: relative;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      padding: 0 2rem;
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.header__title {
+  width: 100%;
+  z-index: 1;
+  color: $col-text;
+  font-size: 16.8rem;
+  line-height: 16rem;
+  letter-spacing: -5%;
+  font-family: 'GalanoGrotesque', serif;
+  margin-left: 12.6rem;
+
+  &--margin-top {
+    margin-top: 15rem;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--flex {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-left: 0;
+      margin-top: 46.6rem;
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+    }
+  }
+}
+
+.welcome-third {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+}
+
+
+.header__title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome__links {
+  margin-top: 18.6rem;
+  width: 3.6rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-top: 16.6rem;
+    }
+  }
+}
+
+.welcome__mobile-header {
+  display: none;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      display: block;
+    }
+  }
+}
+
+.welcome__graffiti-wrapper {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.welcome__graffiti-img {
+  width: 82rem;
+  height: 58rem;
+}
+
+.welcome__graffiti-img-smudges {
+  position: absolute;
+  bottom: -8rem;
+  right: 31.6rem;
+  width: 22rem;
+  height: 40rem;
+  transition: clip-path 0.5s linear;
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+
+  &--visible {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes fadeInUpAndGrow {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 200%, 0) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -10%, 0) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.header__title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0) scale(0.8);
+  transform-origin: 50% 80% 0;
+  animation-fill-mode: forwards;
+}
+
+.header__title span.visible {
+  animation-name: fadeInUpAndGrow;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+}

@@ -1,0 +1,47 @@
+@import "../variables.scss";
+@import "./jellyfish.scss";
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.3);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.welcome__text-zoom-in span {
+  display: inline-block;
+  opacity: 0;
+  animation: zoomIn 1s forwards;
+}
+
+.welcome__text-zoom-in span:nth-child(1) {
+  animation-delay: 3s;
+}
+
+.welcome__text-zoom-in span:nth-child(3) {
+  animation-delay: 3.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.welcome__header-hidden {
+  opacity: 0;
+  transition: all 1.5s ease-out;
+}
+
+.welcome__header-visible {
+  opacity: 1;
+}

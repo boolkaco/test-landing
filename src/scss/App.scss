@@ -1,0 +1,173 @@
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  position: relative;
+  width: 100vw;
+  background-color: $col-bg;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+
+.app__wrapper {
+  margin: 0 auto;
+  max-width: $app-wrapper-width;
+  width: 100%;
+}
+
+.app-link {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: end;
+  padding: 0.8rem 0.8rem 0.2rem;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      height: 3.6rem;
+    }
+  }
+
+  &--primary {
+    background-color: $col-link-primary-bg;
+    border-radius: 0.2rem;
+    height: 3.6rem;
+
+    @media (max-width: $screen-medium-size) {
+      & {
+        height: 4.4rem;
+        width: 13.8rem;
+      }
+    }
+  }
+}
+
+// app-link
+
+.app-link__arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  display: flex;
+  align-self: start;
+}
+
+.app-link__title {
+  margin-right: 0.2rem;
+  font-size: 1.4rem;
+  font-family: 'GalanoGrotesque', serif;
+  color: $col-link;
+}
+
+// icon-link
+
+.icon-link__icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.icon-link {
+  margin-bottom: 0.6rem;
+  position: relative;
+  cursor: pointer;
+
+  &>svg>.svg-icon {
+    fill: $col-social-icon;
+  }
+
+  &>svg>.svg-icon-fill {
+    fill: $col-vulcan;
+  }
+}
+
+
+.icon-volume {
+  z-index: 1;
+  position: absolute;
+  bottom: -0.2rem;
+  right: 0;
+  background-color: $col-icon-link-bg;
+  border-radius: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+// ticker-text
+
+.ticker-text__wrapper {
+  z-index: 0;
+  width: 100%;
+  height: 4.6rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: $col-ticker-line;
+}
+
+.ticker-text__text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker 12s linear infinite;
+
+  & > * {
+    margin-right: 4rem;
+  }
+
+  &>.ticker-text__text--bold {
+    font-family: 'DeltaGothicOne', serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    letter-spacing: -3%;
+  }
+
+  &>.ticker-text__text--regular {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    letter-spacing: -3%;
+    font-family: 'GalanoGrotesque', serif;
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.jellyfish-wrapper {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.jellyfish__img {
+  z-index: 11;
+  transform: rotate(24deg);
+  width: 42rem;
+  height: 60rem;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      transform: rotate(-20deg);
+    }
+  }
+}

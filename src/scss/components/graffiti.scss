@@ -1,0 +1,348 @@
+@import "../variables";
+
+.graffiti__image {
+  display: flex;
+  justify-content: end;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-top: 4.6rem;
+      justify-content: center;
+    }
+  }
+}
+
+.graffiti__image-img {
+  width: 82.8rem;
+  height: 68rem;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      width: 46.8rem;
+      height: 33.6rem;
+    }
+  }
+}
+
+.graffiti__content {
+  width: 100%;
+  height: 100%;
+  background-color: $col-graffiti-bg;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-top: -4rem;
+      padding: 0 2.2rem 24rem 2rem;
+    }
+  }
+}
+
+.graffiti__description {
+  margin-top: 20rem;
+  margin-left: 20rem;
+  position: relative;
+  width: 66rem;
+  font-size: 2.8rem;
+  line-height: 4.4rem;
+  font-family: 'GalanoGrotesque', serif;
+  text-align: justify;
+  color: $col-text;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      font-size: 2.2rem;
+      line-height: 3.6rem;
+      margin-top: 16.8rem;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.graffiti__description-logo {
+  position: absolute;
+  top: 1rem;
+  width: 14.8rem;
+  height: 2.6rem;
+}
+
+.graffiti__wrapper {
+  position: relative;
+  max-width: 144rem;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.graffiti__description-img {
+  top: 20rem;
+  right: 4.6rem;
+  width: 56rem;
+  height: 56rem;
+  position: absolute;
+  transform: rotate(124deg);
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      top: 0;
+      right: 0;
+      position: relative;
+      margin-top: 1rem;
+      margin-left: 6rem;
+      width: 38.6rem;
+      height: 38.6rem;
+    }
+  }
+}
+
+.graffiti__description-img-second {
+  position: absolute;
+  top: 80rem;
+  left: 20rem;
+  width: 56rem;
+  height: 56rem;
+  transform: rotate(-74deg);
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      top: 80rem;
+      left: -18rem;
+      width: 34.5rem;
+      height: 33.8rem;
+      transform: rotate(-5deg);
+    }
+  }
+}
+
+.graffiti__description-img-third {
+  position: absolute;
+  top: 120rem;
+  right: -26rem;
+  width: 68rem;
+  height: 68rem;
+  transform: rotate(-138deg);
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      top: 90rem;
+      right: -18rem;
+      width: 48.8rem;
+      height: 48.8rem;
+    }
+  }
+}
+
+.graffiti__phrase {
+  z-index: 1;
+  width: 100%;
+  margin-top: 28rem;
+  margin-left: 20rem;
+  color: $col-text;
+  font-size: 16.8rem;
+  line-height: 16rem;
+  letter-spacing: -5%;
+  font-family: 'GalanoGrotesque', serif;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-top: 0;
+      margin-left: 0;
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+      letter-spacing: -5%;
+    }
+  }
+}
+
+.graffiti__phrase-second {
+  z-index: 1;
+  width: 100%;
+  margin-left: 20rem;
+  color: $col-text;
+  font-size: 16.8rem;
+  line-height: 16rem;
+  letter-spacing: -5%;
+  font-family: 'GalanoGrotesque', serif;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-left: 0;
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+      letter-spacing: -5%;
+    }
+  }
+}
+
+.graffiti__phrase-third {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  margin-top: 12rem;
+  margin-left: 20rem;
+  color: $col-text;
+  font-size: 16.8rem;
+  line-height: 16rem;
+  letter-spacing: -5%;
+  font-family: 'GalanoGrotesque', serif;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-top: 36rem;
+      margin-left: 0;
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+      letter-spacing: -5%;
+    }
+  }
+}
+
+.graffiti__logo {
+  z-index: 111;
+  top: -50%;
+  left: 20%;
+  position: absolute;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      top: -120%;
+      left: 14%;
+    }
+  }
+}
+
+.graffiti__logo-icon {
+  width: 62.8rem;
+  height: 35.2rem;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      width: 35rem;
+      height: 19.6rem;
+    }
+  }
+}
+
+.graffiti__features-wrapper {
+  margin-top: -0.2rem;
+}
+
+.graffiti__features-title {
+  font-family: 'GalanoGrotesque', serif;
+  font-size: 2.8rem;
+  line-height: 4.2rem;
+  text-align: center;
+  color: $col-text;
+}
+
+.graffiti__features {
+  margin-top: 5.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 12.4rem;
+
+  .graffiti__features > * {
+    flex-basis: calc(33.3333% - 3.2rem);
+    margin-bottom: 3.2rem;
+  }
+
+  & > * {
+    margin-bottom: 8.2rem;
+    width: 35rem;
+  }
+}
+
+.graffiti__end-phrase {
+  z-index: 1;
+  width: 100%;
+  margin-top: 19.5rem;
+  margin-left: 20rem;
+  color: $col-text;
+  font-size: 16.8rem;
+  line-height: 16rem;
+  letter-spacing: -5%;
+  font-family: 'GalanoGrotesque', serif;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      margin-left: 0;
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+    }
+  }
+}
+
+.graffiti__start-side {
+  z-index: 1;
+  width: 100%;
+  height: 10rem;
+  margin-top: -10rem;
+  background-color: $col-graffiti-bg;
+  position: absolute;
+  left: 0;
+  clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+.graffiti__end-side {
+  z-index: 0;
+  width: 100%;
+  height: 10rem;
+  background-color: $col-graffiti-bg;
+  position: absolute;
+  left: 0;
+  clip-path: ellipse(60% 100% at 50% 0%);
+}
+
+.defi-graffiti {
+  position: relative;
+  padding: 1.8rem 12.8rem 0 12rem;
+  height: 100vh;
+  background-color: $col-bg;
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      padding: 0;
+    }
+  }
+}
+
+.defi-graffiti__graffiti {
+  width: 100%;
+  height: 100%;
+}
+
+.defi-graffiti__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.defi-graffiti__img-wrapper {
+  position: absolute;
+  top: 6rem;
+  width: 119rem;
+  height: 79.8rem;
+}
+
+
+.defi-graffiti__graffiti-img-smudges {
+  position: absolute;
+  top: 63%;
+  right: 18rem;
+  width: 70rem;
+  height: 50rem;
+  transition: clip-path 1s ease-out;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+  &--visible {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}

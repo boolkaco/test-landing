@@ -1,0 +1,159 @@
+@import "../variables.scss";
+
+.jellyfish__animation {
+  z-index: 0;
+  overflow: hidden;
+  height: 120rem;
+  position: absolute;
+  top: -14rem;
+  right: -8rem;
+
+  &--left {
+    left: 20rem;
+  }
+
+  @media (max-width: $screen-medium-size) {
+    & {
+      width: 39rem;
+      height: 55rem;
+      left: -7rem;
+      top: 8.4rem;
+    }
+  }
+}
+
+.jellyfish-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+.jellyfish__animation-wrapper {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  &>img {
+    width: 70rem;
+  }
+
+  &--featuring {
+    top: 100%;
+  }
+
+  &--get-ready {
+    top: 55%;
+    animation: moveFromBottomFirst 1s ease-out forwards;
+    animation-fill-mode: forwards;
+  }
+
+  &--revolution {
+    top: 30%;
+    animation: moveFromBottomSecond 1s ease-out forwards;
+    animation-fill-mode: forwards;
+  }
+
+  &--graffiti {
+    top: -10%;
+    animation: moveFromBottomThird 1s ease-out forwards;
+    animation-fill-mode: forwards;
+  }
+}
+
+.jellyfish__animation-move-left {
+  transform: translateX(-100%);
+  transition: transform 2s ease-in-out;
+}
+
+.jellyfish__animation-move-right {
+  transform: translateX(0);
+  transition: transform 2s ease-in-out;
+}
+
+.jellyfish__animation-move-hide {
+  z-index: -1;
+}
+
+.jellyfish__animation-move-show {
+  z-index: 0;
+}
+
+.jellyfish__background-video {
+  position: absolute;
+  top: -10rem;
+  height: 130rem;
+  overflow: hidden;
+  transition: right 0.5s ease, left 0.5s ease;
+
+  &--right {
+
+    transform: translateX(calc(100vw / 2));
+    transition: transform 1.15s ease-in-out;
+
+    //right: calc((100vw - $app-wrapper-width) / 2);
+    //left: auto;
+  }
+
+  &--left {
+    transform: translateX(0);
+    transition: transform 1.15s ease-in-out;
+
+    //left: calc((100vw - $app-wrapper-width) / 2);
+    //right: auto;
+  }
+}
+
+.jellyfish__video-container {
+  z-index: -10;
+  position: fixed;
+}
+
+.jellyfish__video-container video {
+  opacity: 0;
+  //transition: opacity 0.5s;
+}
+
+.jellyfish__video-container video.visible {
+  opacity: 1;
+}
+
+.jellyfish__video-container video.hidden {
+  opacity: 0;
+}
+
+.test_example {
+  width: 100px;
+  height: 200px;
+  background-color: red;
+}
+
+@keyframes moveFromBottomFirst {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 55%;
+  }
+}
+
+@keyframes moveFromBottomSecond {
+  0% {
+    top: 55%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes moveFromBottomThird {
+  0% {
+    top: 30%;
+  }
+  100% {
+    top: -10%;
+  }
+}
